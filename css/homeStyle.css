@@ -1,0 +1,97 @@
+/* space between columns */
+.margin-left-setting {
+  margin-right: 40px; /* gap between table and profile card */
+}
+
+/* profile card bigger */
+.profile-card {
+  width: 260px;        /* increased from 200px */
+  height: 260px;       /* increased from 200px */
+  background: #fff;
+  padding: 30px;
+  border-radius: 50%;
+  box-shadow: 0 0 22px #3336;
+  transition: all .6s ease;
+  margin-top: 150px;   /* keep same alignment as table */
+  
+}
+
+.profile-card:hover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+   height: auto;  
+  /* increased height for bigger image */
+}
+
+.profile-card .img {
+  width: 100%;
+  height: 100%;
+}
+
+.profile-card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 22px #3336;
+  transition: all .6s ease;
+  display: block;
+}
+
+.profile-card:hover img {
+  transform: translateY(-60px);
+  border-radius: 15px;
+}
+
+/* caption section */
+.caption {
+  text-align: center;
+  transform: translateY(-60px);
+  opacity: 0;
+  transition: all .6s ease;
+}
+
+.profile-card:hover .caption {
+  opacity: 1;
+  transform: translateY(-10px);
+}
+
+.caption h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 10px 0 5px;
+}
+
+.caption p {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  color: #0c52a1;
+  margin-bottom: 10px;
+}
+
+/* social icons */
+.social-links {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 5px;
+}
+
+.social-links a {
+  display: inline-block;
+  transition: transform .3s ease;
+}
+
+.social-links a:hover {
+  transform: translateY(-6px);
+}
+
+/* responsive */
+@media only screen and (max-width: 700px) {
+  .profile-card {
+    margin: 45px auto 0 auto; /* top margin 45px, auto left/right to center */
+    display: block;           /* ensures it's treated as block for centering */
+  }
+}

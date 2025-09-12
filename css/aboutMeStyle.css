@@ -1,0 +1,22 @@
+/* Social icons container */
+.social-icon li {
+  display: inline-block;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+/* Icon style */
+.social-icon li i {
+  font-size: 24px; /* adjust size */
+  display: inline-block;
+  animation: jump 1s ease-in-out infinite; /* continuous jump */
+  animation-delay: calc(var(--i) * 0.2s); /* stagger effect */
+}
+
+/* Keyframes for jump */
+@keyframes jump {
+  0%, 100% { transform: translateY(0); }
+  25% { transform: translateY(-10px); }
+  50% { transform: translateY(0); }
+  75% { transform: translateY(-5px); }
+}
