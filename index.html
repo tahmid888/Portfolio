@@ -199,14 +199,10 @@
     </div><!-- row -->
   </div><!-- container -->
 </section>
-<!-- Lottie script at the end -->
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
 
     <!-- Home Section End -->
 
-<!--  -->
-
-<!--  -->
       <!-- About Start -->
     <section id="about" class="about section-space-padding">
       <div class="container">
@@ -318,7 +314,7 @@
     </section>
 
     <!-- Skills Modal Start -->
-<!-- 
+
     <div class="modal fade padding-top-70" id="skillmodal" role="dialog">
       <div class="modal-dialog">
         <div class="modal-content pattern-bg">
@@ -404,8 +400,9 @@
           </div>
         </div>
       </div>
-    </div>  -->
+    </div>  
     <!-- Skills Modal End -->
+
 
     <!-- Subscribe Modal Start -->
      
@@ -470,6 +467,7 @@
   ></lottie-player>
   <p>Thanks! You've been subscribed.</p>
 </div>
+<!-- Lottie success animation end-->
                 </div>
               </div>
             </div>
@@ -490,7 +488,7 @@ const mcSuccess = document.getElementById('mc-success');
 mcForm.addEventListener('submit', async function(e) {
   e.preventDefault(); // stop default navigation
 
-  // ✅ Check HTML5 required fields
+  // Check HTML5 required fields
   if (!mcForm.checkValidity()) {
     mcForm.reportValidity(); // show browser validation popup
     return;
@@ -514,7 +512,7 @@ mcForm.addEventListener('submit', async function(e) {
   }
 });
 </script>
-
+ <!-- To handle email form submission End -->
 
   
     
@@ -624,6 +622,8 @@ mcForm.addEventListener('submit', async function(e) {
     </section>
     <!-- Experience End -->
 
+
+
     <!-- Portfio Start -->
 
 <section id="portfolio" class="portfolio section-space-padding">
@@ -642,7 +642,7 @@ mcForm.addEventListener('submit', async function(e) {
 
     <!-- Portfolio cards wrapper -->
     <div class="portfolio-row">
-      <!-- Portfolio cards (example: 6 cards) -->
+      <!-- Portfolio cards (example: 1 cards) -->
       <div class="portfolio-card">
         <div class="portfolio-img">
           <img src="images/portfolio/foodking-web.png"
@@ -658,7 +658,7 @@ mcForm.addEventListener('submit', async function(e) {
           </div>
         </div>
       </div>
-      <!-- Portfolio cards (example: 6 cards) -->
+      <!-- Portfolio cards (example: 2 cards) -->
       <div class="portfolio-card">
         <div class="portfolio-img">
           <img src="images/portfolio/foodking-web.png"
@@ -674,7 +674,7 @@ mcForm.addEventListener('submit', async function(e) {
           </div>
         </div>
       </div>
-      <!-- Portfolio cards (example: 6 cards) -->
+      <!-- Portfolio cards (example: 3 cards) -->
       <div class="portfolio-card">
         <div class="portfolio-img">
           <img src="images/portfolio/foodking-web.png"
@@ -690,7 +690,7 @@ mcForm.addEventListener('submit', async function(e) {
           </div>
         </div>
       </div>
-      <!-- Portfolio cards (example: 6 cards) -->
+      <!-- Portfolio cards (example: 4 cards) -->
       <div class="portfolio-card">
         <div class="portfolio-img">
           <img src="images/portfolio/foodking-web.png"
@@ -706,7 +706,7 @@ mcForm.addEventListener('submit', async function(e) {
           </div>
         </div>
       </div>
-      <!-- Portfolio cards (example: 6 cards) -->
+      <!-- Portfolio cards (example: 5 cards) -->
       <div class="portfolio-card">
         <div class="portfolio-img">
           <img src="images/portfolio/foodking-web.png"
@@ -1197,6 +1197,8 @@ form.addEventListener('submit', async (e) => {
     <script src="js/portfolio.js"></script>
     <script src="js/contact.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- For bootsrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   </body>
 </html>

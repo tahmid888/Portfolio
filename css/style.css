@@ -575,7 +575,7 @@ tr > td:nth-child(2) {
 
 /* Skills */
 
-/* .my-skill strong,
+ .my-skill strong,
 .my-skill span {
   font-size: 18px;
   font-weight: 400;
@@ -614,7 +614,7 @@ tr > td:nth-child(2) {
 .modal-body .btn:hover {
 	box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.3);
 	outline: 0;
-} */
+} 
 
 
 
@@ -812,7 +812,7 @@ ul.portfolio li.active {
 .mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
     cursor: inherit;
 } */
-/* Chat GPT CSS */
+
 
 
 
