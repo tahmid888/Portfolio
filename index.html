@@ -32,6 +32,7 @@
     <link rel="stylesheet" type="text/css" href="css/homeStyle.css" />
      <link rel="stylesheet" type="text/css" href="css/aboutMeStyle.css" />
      <link rel="stylesheet" type="text/css" href="css/portfolioStyle.css" />
+     <link rel="stylesheet" type="text/css" href="css/contactUs.css" />
 
     <!-- Google Web Fonts  -->
     <link
@@ -426,12 +427,12 @@
                   >
                     <i class="fa fa-close"></i>
                   </button>
-                  <h2>I'm here to help you.</h2>
+                  <h2>I'm here to assist you.</h2>
                   <div class="divider dark">
                     <i class="icon-envelope-letter"></i>
                   </div>
                   <p>
-                    Send your email to me...
+                    Send me your email and I'll respond promptly
                   </p>
                 </div>
               </div>
@@ -442,20 +443,33 @@
                 <div class="margin-bottom-50">
                   <form
                     id="mc-form"
-                    method="post"
-                    action="http://uipasta.us14.list-manage.com/subscribe/post?u=854825d502cdc101233c08a21&amp;id=86e84d44b7"
+                    method="POST"
+                    action="https://formspree.io/f/xzzawkpe"
                   >
                     <div class="subscribe-form">
                       <input
                         id="mc-email"
+                        name="email"
                         type="email"
                         placeholder="Email Address"
                         class="text-input"
+                        required
                       />
                       <button class="submit-btn" type="submit">Submit</button>
                     </div>
-                    <label for="mc-email" class="mc-label"></label>
+                    <!-- <label for="mc-email" class="mc-label"></label> -->
                   </form>
+                 <!-- Lottie success animation -->
+<div id="mc-success" class="hidden text-center mt-3">
+  <lottie-player
+    src="https://lottie.host/57c48ecd-d11e-486a-8fa3-e885da44b010/XrRuUc4hle.json" 
+    background="transparent"
+    speed="1"
+    style="width:150px;height:150px;margin:0 auto;"
+    autoplay
+  ></lottie-player>
+  <p>Thanks! You've been subscribed.</p>
+</div>
                 </div>
               </div>
             </div>
@@ -466,6 +480,41 @@
 
     <!-- Subscribe Modal End -->
     <!-- About End -->
+
+
+     <!-- To handle email form submission -->
+<script>
+const mcForm = document.getElementById('mc-form');
+const mcSuccess = document.getElementById('mc-success');
+
+mcForm.addEventListener('submit', async function(e) {
+  e.preventDefault(); // stop default navigation
+
+  // ✅ Check HTML5 required fields
+  if (!mcForm.checkValidity()) {
+    mcForm.reportValidity(); // show browser validation popup
+    return;
+  }
+
+  // Submit via AJAX to Formspree
+  const response = await fetch(mcForm.action, {
+    method: mcForm.method,
+    body: new FormData(mcForm),
+    headers: { 'Accept': 'application/json' }
+  });
+
+  if (response.ok) {
+    mcForm.reset();
+    mcSuccess.classList.remove('hidden'); // show success message / Lottie
+    mcSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+    setTimeout(() => mcSuccess.classList.add('hidden'), 5000);
+  } else {
+    alert('Oops! Something went wrong. Please try again.');
+  }
+});
+</script>
+
 
   
     
@@ -577,7 +626,7 @@
 
     <!-- Portfio Start -->
 
-    <section id="portfolio" class="portfolio section-space-padding">
+<section id="portfolio" class="portfolio section-space-padding">
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
@@ -593,12 +642,92 @@
 
     <!-- Portfolio cards wrapper -->
     <div class="portfolio-row">
-      <!-- Card 1 -->
+      <!-- Portfolio cards (example: 6 cards) -->
       <div class="portfolio-card">
         <div class="portfolio-img">
-          <img src="images/portfolio/foodking-web.png" 
-          alt="FoodKing Selenium Scripts"  
-          style="max-width: 100%; height: auto; display: block; object-fit: contain;">
+          <img src="images/portfolio/foodking-web.png"
+               loading="lazy" 
+               alt="FoodKing Selenium Scripts">
+        </div>
+        <div class="portfolio-body">
+          <h3>FoodKing Selenium Scripts</h3>
+          <p>Automated web testing for FoodKing using Selenium.</p>
+          <div class="portfolio-buttons">
+            <a href="#" target="_blank" class="btn btn-live">Live</a>
+            <a href="#" target="_blank" class="btn btn-github">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <!-- Portfolio cards (example: 6 cards) -->
+      <div class="portfolio-card">
+        <div class="portfolio-img">
+          <img src="images/portfolio/foodking-web.png"
+               loading="lazy" 
+               alt="FoodKing Selenium Scripts">
+        </div>
+        <div class="portfolio-body">
+          <h3>FoodKing Selenium Scripts</h3>
+          <p>Automated web testing for FoodKing using Selenium.</p>
+          <div class="portfolio-buttons">
+            <a href="#" target="_blank" class="btn btn-live">Live</a>
+            <a href="#" target="_blank" class="btn btn-github">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <!-- Portfolio cards (example: 6 cards) -->
+      <div class="portfolio-card">
+        <div class="portfolio-img">
+          <img src="images/portfolio/foodking-web.png"
+               loading="lazy" 
+               alt="FoodKing Selenium Scripts">
+        </div>
+        <div class="portfolio-body">
+          <h3>FoodKing Selenium Scripts</h3>
+          <p>Automated web testing for FoodKing using Selenium.</p>
+          <div class="portfolio-buttons">
+            <a href="#" target="_blank" class="btn btn-live">Live</a>
+            <a href="#" target="_blank" class="btn btn-github">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <!-- Portfolio cards (example: 6 cards) -->
+      <div class="portfolio-card">
+        <div class="portfolio-img">
+          <img src="images/portfolio/foodking-web.png"
+               loading="lazy" 
+               alt="FoodKing Selenium Scripts">
+        </div>
+        <div class="portfolio-body">
+          <h3>FoodKing Selenium Scripts</h3>
+          <p>Automated web testing for FoodKing using Selenium.</p>
+          <div class="portfolio-buttons">
+            <a href="#" target="_blank" class="btn btn-live">Live</a>
+            <a href="#" target="_blank" class="btn btn-github">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <!-- Portfolio cards (example: 6 cards) -->
+      <div class="portfolio-card">
+        <div class="portfolio-img">
+          <img src="images/portfolio/foodking-web.png"
+               loading="lazy" 
+               alt="FoodKing Selenium Scripts">
+        </div>
+        <div class="portfolio-body">
+          <h3>FoodKing Selenium Scripts</h3>
+          <p>Automated web testing for FoodKing using Selenium.</p>
+          <div class="portfolio-buttons">
+            <a href="#" target="_blank" class="btn btn-live">Live</a>
+            <a href="#" target="_blank" class="btn btn-github">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <!-- Portfolio cards (example: 6 cards) -->
+      <div class="portfolio-card">
+        <div class="portfolio-img">
+          <img src="images/portfolio/foodking-web.png"
+               loading="lazy" 
+               alt="FoodKing Selenium Scripts">
         </div>
         <div class="portfolio-body">
           <h3>FoodKing Selenium Scripts</h3>
@@ -610,96 +739,17 @@
         </div>
       </div>
 
-      <!-- Card 2 -->
-      <div class="portfolio-card">
-        <div class="portfolio-img">
-          <img src="images/portfolio/foodking-user-mobile-app.png" 
-          alt="FoodKing Appium"
-          style="max-width: 100%; height: auto; display: block; object-fit: contain;">
-          
-          
-        </div>
-        <div class="portfolio-body">
-          <h3>FoodKing Appium</h3>
-          <p>Mobile automation testing for FoodKing app using Appium.</p>
-          <div class="portfolio-buttons">
-            <a href="#" target="_blank" class="btn btn-live">Live</a>
-            <a href="#" target="_blank" class="btn btn-github">GitHub</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="portfolio-card">
-        <div class="portfolio-img">
-          <img src="images/portfolio/e-dp.png" 
-          alt="eDP System"
-          style="max-width: 100%; height: auto; display: block; object-fit: contain;">
-        </div>
-        <div class="portfolio-body">
-          <h3>eDP System</h3>
-          <p>Directorate general defence purchase system.</p>
-          <div class="portfolio-buttons">
-            <a href="#" target="_blank" class="btn btn-live">Live</a>
-            <a href="#" target="_blank" class="btn btn-github">GitHub</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="portfolio-card">
-        <div class="portfolio-img">
-          <img src="images/portfolio/1.6.jpg" 
-          alt="E-Commerce E2E"
-          style="max-width: 100%; height: auto; display: block; object-fit: contain;">
-        </div>
-        <div class="portfolio-body">
-          <h3>E-Commerce E2E</h3>
-          <p>End-to-end automation testing of an e-commerce website.</p>
-          <div class="portfolio-buttons">
-            <a href="#" target="_blank" class="btn btn-live">Live</a>
-            <a href="#" target="_blank" class="btn btn-github">GitHub</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 5 -->
-      <div class="portfolio-card">
-        <div class="portfolio-img">
-          <img src="images/portfolio/1.7.jpg" 
-          alt="JMeter Web Testing"
-          style="max-width: 100%; height: auto; display: block; object-fit: contain;">
-        </div>
-        <div class="portfolio-body">
-          <h3>JMeter Web Testing</h3>
-          <p>Performance testing of web applications using JMeter.</p>
-          <div class="portfolio-buttons">
-            <a href="#" target="_blank" class="btn btn-live">Live</a>
-            <a href="#" target="_blank" class="btn btn-github">GitHub</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 6 -->
-      <div class="portfolio-card">
-        <div class="portfolio-img">
-          <img src="images/portfolio/1.7.jpg" 
-          alt="Foodima Selenium"
-          style="max-width: 100%; height: auto; display: block; object-fit: contain;">
-        </div>
-        <div class="portfolio-body">
-          <h3>Foodima Selenium</h3>
-          <p>Selenium-based automation suite for Foodima to test web functionalities.</p>
-          <div class="portfolio-buttons">
-            <a href="#" target="_blank" class="btn btn-live">Live</a>
-            <a href="#" target="_blank" class="btn btn-github">GitHub</a>
-          </div>
-        </div>
-      </div>
-
+      <!-- Repeat other cards similarly -->
     </div>
   </div>
+
+  <div class="text-center margin-top-50">
+    <a class="button button-style button-style-dark button-style-color-2 smoth-scroll" href="#contact">
+      Hire Me!
+    </a>
+  </div>
 </section>
+
 
     <!-- Portfolio End -->
 
@@ -931,7 +981,7 @@
               <div class="divider dark">
                 <i class="icon-envelope-open"></i>
               </div>
-              <p>If you’d like to get in touch, 
+              <p>If you'd like to get in touch, 
                 please fill out the form below or reach me 
                 through my email and social links</p>
             </div>
@@ -945,14 +995,16 @@
                 <div class="contact-us-detail">
                   <a href="mailto:name@domain.com">tahmidulanon@gmail.com</a>
                 </div>
-                <form class="contact-us pattern-bg">
+                <form id="contact-form" action="https://formspree.io/f/xzzawkpe" method = "POST" class="contact-us pattern-bg">
                   <div class="col-sm-6">
                     <div class="form-group">
                       <input
                         type="text"
                         id="name"
+                        name="name"
                         class="form-control"
                         placeholder="Your Name"
+                        required
                       />
                     </div>
                   </div>
@@ -962,8 +1014,10 @@
                       <input
                         type="email"
                         id="email"
+                        name="email"
                         class="form-control"
                         placeholder="Your Email"
+                        required
                       />
                     </div>
                   </div>
@@ -973,6 +1027,7 @@
                       <input
                         type="text"
                         id="website"
+                        name="website"
                         class="form-control"
                         placeholder="Your Website"
                       />
@@ -984,19 +1039,23 @@
                       <input
                         type="text"
                         id="address"
+                        name="address"
                         class="form-control"
                         placeholder="Where are You From?"
+                        required
                       />
                     </div>
                   </div>
 
                   <div class="col-sm-12">
-                    <select id="subject" class="form-group form-control">
+                    <select id="subject" name="subject" class="form-group form-control" requireds>
                       <option value="" selected disabled>Subject</option>
-                      <option>Website Design & Development</option>
-                      <option>Wordpress Development</option>
-                      <option>Search Engine Optimization</option>
-                      <option>Mobile Website</option>
+                      <option>Manual Testing Inquiries</option>
+                      <option>Automation Testing</option>
+                      <option>Test Plan & Test Case Review</option>
+                      <option>Bug Reporting</option>
+                      <option>Performance & Load Testing</option>
+                      <option>QA Process Improvements</option>
                       <option>I Want to General Talk</option>
                       <option>Other</option>
                     </select>
@@ -1006,9 +1065,11 @@
                     <div class="textarea-message form-group">
                       <textarea
                         id="message"
+                        name="message"
                         class="textarea-message form-control"
                         placeholder="Your Message"
                         rows="5"
+                        required
                       ></textarea>
                     </div>
                   </div>
@@ -1022,6 +1083,18 @@
                     </button>
                   </div>
                 </form>
+                <!-- success animation container -->
+<div id="success-animation" class="hidden text-center mt-3">
+  <lottie-player
+    src="https://lottie.host/57c48ecd-d11e-486a-8fa3-e885da44b010/XrRuUc4hle.json"
+    background="transparent"
+    speed="1"
+    style="width:150px;height:150px;margin:0 auto;"
+    autoplay
+  ></lottie-player>
+  <p>Thank you! Your message has been sent.</p>
+</div>
+ <!-- success animation container end -->
               </div>
             </div>
           </div>
@@ -1029,6 +1102,36 @@
       </div>
     </section>
     <!-- Contact End -->
+
+ <!-- Success Message After Submission of Form -->
+<script>
+const form = document.getElementById('contact-form');
+const successAnim = document.getElementById('success-animation');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault(); // stop default navigation
+
+  const response = await fetch(form.action, {
+    method: form.method,
+    body: new FormData(form), // send as form data
+    headers: { 'Accept': 'application/json' }
+  });
+
+  if (response.ok) {
+    form.reset();
+    successAnim.classList.remove('hidden'); // show animation
+
+    // ✅ scroll to the success animation section smoothly
+    successAnim.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+    // hide after 5 seconds if you want:
+    setTimeout(() => successAnim.classList.add('hidden'), 5000);
+  } else {
+    alert('Oops! Something went wrong. Please try again.');
+  }
+});
+</script>
+
 
     <!-- Footer Start -->
     <footer class="footer-section">
@@ -1070,7 +1173,7 @@
 
           <div class="col-md-12 uipasta-credit">
             <p>
-              Design & Development By
+              © All Rights Reserved By
               <a href="http://www.github.com/tahmid888" target="_blank" title="Github"
                 >@Tahamidul Haque</a
               >
@@ -1092,5 +1195,8 @@
     <!-- Main Javascript File  -->
     <script type="text/javascript" src="js/scripts.js"></script>
     <script src="js/portfolio.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
   </body>
 </html>
