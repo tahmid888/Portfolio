@@ -1,5 +1,6 @@
 .skills-section {
-  background: #f4f7fa;
+  /* background: #f4f7fa; */
+  background: #F9F9F9;
   padding: 70px 20px;
 }
 
@@ -57,4 +58,9 @@
 
 .skill-card ul li:last-child {
   border-bottom: none;
+}
+.skill-icon {
+  font-size: 2rem;  /* icon size */
+  color: #007bff;   /* icon color */
+  margin-bottom: 8px;
 }
