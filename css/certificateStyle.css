@@ -1,0 +1,89 @@
+.certifications {
+  background-color: #f9f9f9;
+  padding: 80px 0;
+}
+
+.cert-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+
+.cert-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.cert-info {
+  padding: 20px;
+}
+
+.cert-info h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 10px 0 6px;
+  color: #333333;
+}
+
+.cert-info p {
+  font-size: 14px;
+  color: #666666;
+  margin-bottom: 8px;
+}
+
+.cert-info span {
+  font-size: 13px;
+  color: #999999;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.cert-link a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #007bff;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.cert-link a:hover {
+  color: #0056b3;
+  border-color: #0056b3;
+}
+.udemy-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.cert-link a {
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #007bff;
+  text-decoration: none;
+}
+.cert-link a:hover {
+  color: #0056b3;
+}
+
+
+/* Center cards on large screens */
+.row.justify-content-center {
+  display: flex;
+  justify-content: center;
+}
