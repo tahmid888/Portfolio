@@ -12,6 +12,9 @@
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .cert-card:hover {
@@ -28,6 +31,7 @@
 
 .cert-info {
   padding: 20px;
+  flex-grow: 1; /* makes the info area stretch evenly */
 }
 
 .cert-info h4 {
@@ -51,6 +55,8 @@
 }
 
 .cert-link a {
+  display: inline-flex;
+  align-items: center;
   font-size: 14px;
   font-weight: 500;
   color: #007bff;
@@ -63,27 +69,49 @@
   color: #0056b3;
   border-color: #0056b3;
 }
+
 .udemy-icon {
   width: 18px;
   height: 18px;
   margin-right: 6px;
   vertical-align: middle;
 }
-.cert-link a {
-  display: inline-flex;
-  align-items: center;
-  font-size: 14px;
-  font-weight: 500;
-  color: #007bff;
-  text-decoration: none;
-}
-.cert-link a:hover {
-  color: #0056b3;
-}
 
-
-/* Center cards on large screens */
+/* Make the row act like a flexbox grid */
 .row.justify-content-center {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 30px;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 991px) {
+  .cert-img {
+    height: 220px;
+  }
+}
+
+@media (max-width: 767px) {
+  .certifications {
+    padding: 50px 0;
+  }
+  .cert-img {
+    height: 200px;
+  }
+  .cert-info h4 {
+    font-size: 18px;
+  }
+  .cert-info p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 575px) {
+  .cert-card {
+    width: 100%;
+  }
+  .cert-img {
+    height: 180px;
+  }
 }
